@@ -1,0 +1,367 @@
+{
+  "minimized_validation": {
+    "status": "not_minimized"
+  },
+  "iteration": 20,
+  "detected_at": 1794916216.0722432,
+  "campaign_elapsed_s": 185.08912801742554,
+  "search_mode": "grief",
+  "bugs_detected": [
+    {
+      "class": "kv_corruption",
+      "detail": "Non-deterministic output for identical prompt/temperature=0 (possible KV cache corruption, similarity=0.37)",
+      "score": 10.0,
+      "probe_metadata": {
+        "similarity": 0.3673469387755102,
+        "diverge_token_idx": 15,
+        "logprob_gap": 2.7500000968575478,
+        "logprob_gap_ulps": 22.000000774860382,
+        "logits_dtype": "bfloat16",
+        "diverge_bucket": 3
+      }
+    }
+  ],
+  "seed": 1867302554,
+  "trace": {
+    "seed": 1867302554,
+    "events": [
+      {
+        "action": "send",
+        "offset_ms": 0,
+        "request_id": "c01",
+        "prompt_len": null,
+        "max_tokens": 16,
+        "stream": true,
+        "prefix_len": null,
+        "messages": [
+          {
+            "role": "system",
+            "content_len": 128
+          },
+          {
+            "role": "user",
+            "content_len": 32
+          }
+        ],
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "min_tokens": null,
+        "n_completions": null,
+        "logprobs": null,
+        "repetition_penalty": null,
+        "stop": null,
+        "duration_ms": null,
+        "unicode_stress": null,
+        "adapter_name": null,
+        "origin": null,
+        "prompt_family_id": null,
+        "prompt_style": null,
+        "cache_salt": null,
+        "response_format": null,
+        "guided_json": null,
+        "guided_regex": null,
+        "guided_grammar": null,
+        "guided_choice": null,
+        "allowed_token_ids": null,
+        "bad_words": null,
+        "logit_bias": null,
+        "stop_token_ids": null,
+        "priority": null,
+        "prompt_logprobs": null,
+        "seed": null,
+        "truncate_prompt_tokens": null,
+        "include_usage": null,
+        "prompt_embeds": null
+      },
+      {
+        "action": "send",
+        "offset_ms": 80,
+        "request_id": "c02",
+        "prompt_len": null,
+        "max_tokens": 16,
+        "stream": true,
+        "prefix_len": null,
+        "messages": [
+          {
+            "role": "system",
+            "content_len": 128
+          },
+          {
+            "role": "user",
+            "content_len": 32
+          }
+        ],
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "min_tokens": null,
+        "n_completions": null,
+        "logprobs": null,
+        "repetition_penalty": null,
+        "stop": null,
+        "duration_ms": null,
+        "unicode_stress": null,
+        "adapter_name": null,
+        "origin": null,
+        "prompt_family_id": null,
+        "prompt_style": null,
+        "cache_salt": null,
+        "response_format": null,
+        "guided_json": null,
+        "guided_regex": null,
+        "guided_grammar": null,
+        "guided_choice": null,
+        "allowed_token_ids": null,
+        "bad_words": null,
+        "logit_bias": null,
+        "stop_token_ids": null,
+        "priority": null,
+        "prompt_logprobs": null,
+        "seed": null,
+        "truncate_prompt_tokens": null,
+        "include_usage": null,
+        "prompt_embeds": null
+      },
+      {
+        "action": "send",
+        "offset_ms": 160,
+        "request_id": "c03",
+        "prompt_len": null,
+        "max_tokens": 16,
+        "stream": true,
+        "prefix_len": null,
+        "messages": [
+          {
+            "role": "system",
+            "content_len": 128
+          },
+          {
+            "role": "user",
+            "content_len": 32
+          }
+        ],
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "min_tokens": null,
+        "n_completions": null,
+        "logprobs": null,
+        "repetition_penalty": null,
+        "stop": null,
+        "duration_ms": null,
+        "unicode_stress": null,
+        "adapter_name": null,
+        "origin": null,
+        "prompt_family_id": null,
+        "prompt_style": null,
+        "cache_salt": null,
+        "response_format": null,
+        "guided_json": null,
+        "guided_regex": null,
+        "guided_grammar": null,
+        "guided_choice": null,
+        "allowed_token_ids": null,
+        "bad_words": null,
+        "logit_bias": null,
+        "stop_token_ids": null,
+        "priority": null,
+        "prompt_logprobs": null,
+        "seed": null,
+        "truncate_prompt_tokens": null,
+        "include_usage": null,
+        "prompt_embeds": null
+      },
+      {
+        "action": "send",
+        "offset_ms": 240,
+        "request_id": "c04",
+        "prompt_len": null,
+        "max_tokens": 16,
+        "stream": false,
+        "prefix_len": null,
+        "messages": [
+          {
+            "role": "system",
+            "content_len": 128
+          },
+          {
+            "role": "user",
+            "content_len": 64
+          }
+        ],
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "min_tokens": null,
+        "n_completions": null,
+        "logprobs": null,
+        "repetition_penalty": null,
+        "stop": null,
+        "duration_ms": null,
+        "unicode_stress": null,
+        "adapter_name": null,
+        "origin": null,
+        "prompt_family_id": null,
+        "prompt_style": null,
+        "cache_salt": null,
+        "response_format": null,
+        "guided_json": null,
+        "guided_regex": null,
+        "guided_grammar": null,
+        "guided_choice": null,
+        "allowed_token_ids": null,
+        "bad_words": null,
+        "logit_bias": null,
+        "stop_token_ids": null,
+        "priority": null,
+        "prompt_logprobs": null,
+        "seed": null,
+        "truncate_prompt_tokens": null,
+        "include_usage": null,
+        "prompt_embeds": null
+      },
+      {
+        "action": "send",
+        "offset_ms": 320,
+        "request_id": "c05",
+        "prompt_len": null,
+        "max_tokens": 64,
+        "stream": true,
+        "prefix_len": null,
+        "messages": [
+          {
+            "role": "system",
+            "content_len": 128
+          },
+          {
+            "role": "user",
+            "content_len": 256
+          }
+        ],
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "min_tokens": null,
+        "n_completions": null,
+        "logprobs": null,
+        "repetition_penalty": null,
+        "stop": null,
+        "duration_ms": null,
+        "unicode_stress": null,
+        "adapter_name": null,
+        "origin": null,
+        "prompt_family_id": null,
+        "prompt_style": null,
+        "cache_salt": null,
+        "response_format": null,
+        "guided_json": null,
+        "guided_regex": null,
+        "guided_grammar": null,
+        "guided_choice": null,
+        "allowed_token_ids": null,
+        "bad_words": null,
+        "logit_bias": null,
+        "stop_token_ids": null,
+        "priority": null,
+        "prompt_logprobs": null,
+        "seed": null,
+        "truncate_prompt_tokens": null,
+        "include_usage": null,
+        "prompt_embeds": null
+      },
+      {
+        "action": "send",
+        "offset_ms": 400,
+        "request_id": "c06",
+        "prompt_len": null,
+        "max_tokens": 64,
+        "stream": true,
+        "prefix_len": null,
+        "messages": [
+          {
+            "role": "system",
+            "content_len": 128
+          },
+          {
+            "role": "user",
+            "content_len": 512
+          }
+        ],
+        "temperature": null,
+        "top_p": null,
+        "top_k": null,
+        "min_tokens": null,
+        "n_completions": null,
+        "logprobs": null,
+        "repetition_penalty": null,
+        "stop": null,
+        "duration_ms": null,
+        "unicode_stress": null,
+        "adapter_name": null,
+        "origin": null,
+        "prompt_family_id": null,
+        "prompt_style": null,
+        "cache_salt": null,
+        "response_format": null,
+        "guided_json": null,
+        "guided_regex": null,
+        "guided_grammar": null,
+        "guided_choice": null,
+        "allowed_token_ids": null,
+        "bad_words": null,
+        "logit_bias": null,
+        "stop_token_ids": null,
+        "priority": null,
+        "prompt_logprobs": null,
+        "seed": null,
+        "truncate_prompt_tokens": null,
+        "include_usage": null,
+        "prompt_embeds": null
+      }
+    ],
+    "tags": [
+      "chat_prefix_stress"
+    ]
+  },
+  "bugs": [
+    {
+      "class": "kv_corruption",
+      "detail": "Non-deterministic output for identical prompt/temperature=0 (possible KV cache corruption, similarity=0.37)",
+      "score": 10.0,
+      "probe_metadata": {
+        "similarity": 0.3673469387755102,
+        "diverge_token_idx": 15,
+        "logprob_gap": 2.7500000968575478,
+        "logprob_gap_ulps": 22.000000774860382,
+        "logits_dtype": "bfloat16",
+        "diverge_bucket": 3
+      }
+    }
+  ],
+  "mech_sig": "92c3635c42b13032",
+  "mech_sig_version": 2,
+  "sig_occurrence": 1,
+  "campaign_id": "11b1634f",
+  "server_flags": "",
+  "baseline_ttft_ms": 3059.2172145843506,
+  "baseline_prompt_len": 256,
+  "campaign_name": "",
+  "config_id": "",
+  "config_file": "",
+  "mode": "",
+  "model": "Qwen/Qwen3-0.6B",
+  "engine": "vllm",
+  "adapter": "VllmBaseAdapter",
+  "gpu_type": "",
+  "slot_id": "",
+  "rotation_index": -1,
+  "slurm_job_id": "",
+  "hostname": "<HOST>",
+  "vllm_version": "0.25.1",
+  "minimized": false,
+  "measurement_gaps": [
+    "memory_leak: no gpu data"
+  ],
+  "request_id": "c05"
+}

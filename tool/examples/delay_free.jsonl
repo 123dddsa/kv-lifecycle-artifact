@@ -1,0 +1,2 @@
+{"event": "request_finished", "request_id": "r", "delay_free": true}
+{"event": "quiescence", "pending_recvs": [], "delay_free_drained": true}

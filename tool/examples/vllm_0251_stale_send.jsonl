@@ -1,0 +1,5 @@
+{"delay_free": true, "event": "request_finished", "request_id": "kill-gate-req-0001"}
+{"event": "observe", "recving": ["kill-gate-req-0001"], "sending": []}
+{"event": "free", "request_id": "kill-gate-req-0001"}
+{"delay_free_drained": true, "event": "quiescence", "pending_recvs": []}
+{"event": "observe", "recving": [], "sending": ["kill-gate-req-0001"]}

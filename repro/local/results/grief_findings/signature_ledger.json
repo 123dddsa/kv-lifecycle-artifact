@@ -1,0 +1,52 @@
+{
+  "sig_version": 2,
+  "generated_at": 1794916520.6621609,
+  "campaign_id": "11b1634f",
+  "campaign_name": "",
+  "config_id": "",
+  "slot_id": "",
+  "rotation_index": -1,
+  "model": "Qwen/Qwen3-0.6B",
+  "server_flags": "",
+  "exemplars_per_signature": 5,
+  "n_mechanisms": 3,
+  "n_occurrences": 12,
+  "n_findings_written": 7,
+  "measurement_gaps": {
+    "memory_leak: no gpu data": 44,
+    "kv_block_leak: engine not drained (running=3 waiting=8)": 1,
+    "kv_block_leak: engine not drained (running=3 waiting=5)": 1
+  },
+  "signatures": {
+    "92c3635c42b13032": {
+      "count": 1,
+      "first_iter": 20,
+      "last_iter": 20,
+      "max_score": 10.0,
+      "exemplars": 1,
+      "classes": [
+        "kv_corruption"
+      ]
+    },
+    "9f535b905258d9ec": {
+      "count": 1,
+      "first_iter": 37,
+      "last_iter": 37,
+      "max_score": 8.0,
+      "exemplars": 1,
+      "classes": [
+        "scheduler_hang"
+      ]
+    },
+    "321e24d63312199d": {
+      "count": 10,
+      "first_iter": 44,
+      "last_iter": 53,
+      "max_score": 10.0,
+      "exemplars": 5,
+      "classes": [
+        "liveness_failure"
+      ]
+    }
+  }
+}

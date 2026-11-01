@@ -1,0 +1,76 @@
+{"command": ["<HOME>/venv031/bin/lmcache", "server", "--host", "127.0.0.1", "--port", "5555", "--http-host", "127.0.0.1", "--http-port", "8080", "--l1-size-gb", "1", "--eviction-policy", "LRU", "--supported-transfer-mode", "engine_driven"], "event": "process_started", "name": "lmcache_server", "pgid": 14993, "pid": 14993, "ts_utc": "2026-11-19T16:35:40.947919+00:00"}
+{"event": "lmcache_server_ready", "ts_utc": "2026-11-19T16:35:44.949050+00:00"}
+{"command": ["<HOME>/venv031/bin/vllm", "serve", "<WORKDIR>/hf/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca", "--served-model-name", "Qwen/Qwen3-0.6B", "--host", "127.0.0.1", "--port", "8010", "--max-model-len", "4096", "--max-num-seqs", "64", "--gpu-memory-utilization", "0.3", "--no-enable-prefix-caching", "--enforce-eager", "--kv-transfer-config", "{\"kv_connector\": \"LMCacheMPConnector\", \"kv_role\": \"kv_both\", \"kv_connector_module_path\": \"lmcache.integration.vllm.lmcache_mp_connector\", \"kv_connector_extra_config\": {\"lmcache.mp.host\": \"127.0.0.1\", \"lmcache.mp.port\": 5555, \"lmcache.mp.mp_transfer_mode\": \"engine_driven\", \"lmcache.mp.mq_timeout\": 60}}"], "event": "process_started", "name": "vllm", "pgid": 15097, "pid": 15097, "ts_utc": "2026-11-19T16:35:44.949838+00:00"}
+{"event": "vllm_ready", "ts_utc": "2026-11-19T16:36:13.044709+00:00"}
+{"event": "metrics_snapshot", "tag": "baseline", "ts_utc": "2026-11-19T16:36:13.061677+00:00", "values": {"vllm:kv_cache_usage_perc{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\"}": "0.0", "vllm:num_requests_running{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\"}": "0.0", "vllm:num_requests_waiting_by_reason{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\",reason=\"capacity\"}": "0.0", "vllm:num_requests_waiting_by_reason{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\",reason=\"deferred\"}": "0.0", "vllm:num_requests_waiting{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\"}": "0.0"}}
+{"body": "{\"id\":\"cmpl-8ec8ac40d8849c81\",\"object\":\"text_completion\",\"created\":1795106173,\"model\":\"Qwen/Qwen3-0.6B\",\"choices\":[{\"index\":0,\"text\":\" \\n\\nThe test is about verifying that the\",\"logprobs\":null,\"finish_reason\":\"length\",\"stop_reason\":null,\"token_ids\":null,\"prompt_logprobs\":null,\"prompt_token_ids\":null,\"routed_experts\":null}],\"service_tier\":null,\"system_fingerprint\":\"vllm-0.31.0-c78585b0\",\"usage\":{\"prompt_tokens\":609,\"total_tokens\":617,\"completion_tokens\":8,\"prompt_tokens_details\":null,\"completion_", "event": "normal_request", "status": 200, "tag": "pre-cancel", "ts_utc": "2026-11-19T16:36:13.869725+00:00"}
+{"event": "metrics_snapshot", "tag": "after_pre_cancel", "ts_utc": "2026-11-19T16:36:13.876189+00:00", "values": {"vllm:kv_cache_usage_perc{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\"}": "0.0030009233610341912", "vllm:num_requests_running{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\"}": "0.0", "vllm:num_requests_waiting_by_reason{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\",reason=\"capacity\"}": "0.0", "vllm:num_requests_waiting_by_reason{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\",reason=\"deferred\"}": "0.0", "vllm:num_requests_waiting{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\"}": "0.0"}}
+{"delay_ms": 6.314149518800635, "elapsed_ms": 116.71752948313951, "event": "request_cancelled", "request_id": 32, "seed": 1, "ts_utc": "2026-11-19T16:36:13.999550+00:00"}
+{"delay_ms": 47.71734494231548, "elapsed_ms": 127.3386524990201, "event": "request_cancelled", "request_id": 8, "seed": 1, "ts_utc": "2026-11-19T16:36:14.005706+00:00"}
+{"delay_ms": 48.89545849104633, "elapsed_ms": 131.4132446423173, "event": "request_cancelled", "request_id": 11, "seed": 1, "ts_utc": "2026-11-19T16:36:14.010420+00:00"}
+{"delay_ms": 43.48061846783958, "elapsed_ms": 132.1023590862751, "event": "request_cancelled", "request_id": 15, "seed": 1, "ts_utc": "2026-11-19T16:36:14.011829+00:00"}
+{"delay_ms": 7.018464188781109, "elapsed_ms": 129.48335334658623, "event": "request_cancelled", "request_id": 49, "seed": 1, "ts_utc": "2026-11-19T16:36:14.015523+00:00"}
+{"delay_ms": 32.26909996914655, "elapsed_ms": 145.4687723889947, "event": "request_cancelled", "request_id": 38, "seed": 1, "ts_utc": "2026-11-19T16:36:14.029438+00:00"}
+{"delay_ms": 29.905397432244815, "elapsed_ms": 146.84962574392557, "event": "request_cancelled", "request_id": 43, "seed": 1, "ts_utc": "2026-11-19T16:36:14.031737+00:00"}
+{"delay_ms": 50.252813778292314, "elapsed_ms": 150.46892035752535, "event": "request_cancelled", "request_id": 24, "seed": 1, "ts_utc": "2026-11-19T16:36:14.031830+00:00"}
+{"delay_ms": 75.2707303052397, "elapsed_ms": 155.05339950323105, "event": "request_cancelled", "request_id": 6, "seed": 1, "ts_utc": "2026-11-19T16:36:14.033049+00:00"}
+{"delay_ms": 110.10556923937291, "elapsed_ms": 160.29121819883585, "event": "request_cancelled", "request_id": 1, "seed": 1, "ts_utc": "2026-11-19T16:36:14.037268+00:00"}
+{"delay_ms": 42.13841894531372, "elapsed_ms": 154.72140535712242, "event": "request_cancelled", "request_id": 37, "seed": 1, "ts_utc": "2026-11-19T16:36:14.038510+00:00"}
+{"delay_ms": 80.67987326291401, "elapsed_ms": 160.40620300918818, "event": "request_cancelled", "request_id": 7, "seed": 1, "ts_utc": "2026-11-19T16:36:14.038589+00:00"}
+{"delay_ms": 23.937761463956292, "elapsed_ms": 155.24422656744719, "event": "request_cancelled", "request_id": 57, "seed": 1, "ts_utc": "2026-11-19T16:36:14.042837+00:00"}
+{"delay_ms": 58.452108902929, "elapsed_ms": 165.78845120966434, "event": "request_cancelled", "request_id": 29, "seed": 1, "ts_utc": "2026-11-19T16:36:14.048075+00:00"}
+{"delay_ms": 69.43504626961797, "elapsed_ms": 174.37530495226383, "event": "request_cancelled", "request_id": 27, "seed": 1, "ts_utc": "2026-11-19T16:36:14.056298+00:00"}
+{"delay_ms": 99.02687483726096, "elapsed_ms": 178.93719859421253, "event": "request_cancelled", "request_id": 9, "seed": 1, "ts_utc": "2026-11-19T16:36:14.057499+00:00"}
+{"delay_ms": 63.85360030387448, "elapsed_ms": 182.64193832874298, "event": "request_cancelled", "request_id": 44, "seed": 1, "ts_utc": "2026-11-19T16:36:14.067760+00:00"}
+{"delay_ms": 120.027111522735, "elapsed_ms": 190.6361561268568, "event": "request_cancelled", "request_id": 2, "seed": 1, "ts_utc": "2026-11-19T16:36:14.067842+00:00"}
+{"delay_ms": 60.28573879778204, "elapsed_ms": 183.80741402506828, "event": "request_cancelled", "request_id": 50, "seed": 1, "ts_utc": "2026-11-19T16:36:14.070036+00:00"}
+{"delay_ms": 76.56985361748909, "elapsed_ms": 190.0523928925395, "event": "request_cancelled", "request_id": 39, "seed": 1, "ts_utc": "2026-11-19T16:36:14.074202+00:00"}
+{"delay_ms": 109.82218999898886, "elapsed_ms": 196.0312770679593, "event": "request_cancelled", "request_id": 13, "seed": 1, "ts_utc": "2026-11-19T16:36:14.075403+00:00"}
+{"delay_ms": 100.48568336783855, "elapsed_ms": 207.57126435637474, "event": "request_cancelled", "request_id": 28, "seed": 1, "ts_utc": "2026-11-19T16:36:14.089675+00:00"}
+{"delay_ms": 63.76631318838058, "elapsed_ms": 201.06230024248362, "event": "request_cancelled", "request_id": 63, "seed": 1, "ts_utc": "2026-11-19T16:36:14.089750+00:00"}
+{"delay_ms": 86.18726361017066, "elapsed_ms": 204.50284145772457, "event": "request_cancelled", "request_id": 45, "seed": 1, "ts_utc": "2026-11-19T16:36:14.089817+00:00"}
+{"delay_ms": 72.1688660738599, "elapsed_ms": 204.23610135912895, "event": "request_cancelled", "request_id": 58, "seed": 1, "ts_utc": "2026-11-19T16:36:14.092008+00:00"}
+{"delay_ms": 128.89555680059973, "elapsed_ms": 216.68811980634928, "event": "request_cancelled", "request_id": 14, "seed": 1, "ts_utc": "2026-11-19T16:36:14.096230+00:00"}
+{"delay_ms": 175.4851659515777, "elapsed_ms": 219.62709818035364, "event": "request_cancelled", "request_id": 0, "seed": 1, "ts_utc": "2026-11-19T16:36:14.096302+00:00"}
+{"delay_ms": 101.01352333406632, "elapsed_ms": 212.8114579245448, "event": "request_cancelled", "request_id": 36, "seed": 1, "ts_utc": "2026-11-19T16:36:14.096420+00:00"}
+{"delay_ms": 109.0465382900423, "elapsed_ms": 218.96042115986347, "event": "request_cancelled", "request_id": 31, "seed": 1, "ts_utc": "2026-11-19T16:36:14.101608+00:00"}
+{"delay_ms": 97.20470077569028, "elapsed_ms": 216.23081993311644, "event": "request_cancelled", "request_id": 46, "seed": 1, "ts_utc": "2026-11-19T16:36:14.101726+00:00"}
+{"delay_ms": 139.26689049508445, "elapsed_ms": 223.72770961374044, "event": "request_cancelled", "request_id": 12, "seed": 1, "ts_utc": "2026-11-19T16:36:14.102921+00:00"}
+{"delay_ms": 139.39502260807635, "elapsed_ms": 229.21141516417265, "event": "request_cancelled", "request_id": 16, "seed": 1, "ts_utc": "2026-11-19T16:36:14.109111+00:00"}
+{"delay_ms": 111.21057982625125, "elapsed_ms": 226.59854497760534, "event": "request_cancelled", "request_id": 42, "seed": 1, "ts_utc": "2026-11-19T16:36:14.111305+00:00"}
+{"delay_ms": 94.61300749837272, "elapsed_ms": 227.60174702852964, "event": "request_cancelled", "request_id": 59, "seed": 1, "ts_utc": "2026-11-19T16:36:14.115557+00:00"}
+{"delay_ms": 111.72283402470629, "elapsed_ms": 236.36338207870722, "event": "request_cancelled", "request_id": 51, "seed": 1, "ts_utc": "2026-11-19T16:36:14.122778+00:00"}
+{"delay_ms": 150.92410680480987, "elapsed_ms": 244.53830253332853, "event": "request_cancelled", "request_id": 19, "seed": 1, "ts_utc": "2026-11-19T16:36:14.124972+00:00"}
+{"delay_ms": 143.19544991741748, "elapsed_ms": 244.6217443794012, "event": "request_cancelled", "request_id": 25, "seed": 1, "ts_utc": "2026-11-19T16:36:14.126162+00:00"}
+{"delay_ms": 167.5502212395434, "elapsed_ms": 249.53399691730738, "event": "request_cancelled", "request_id": 10, "seed": 1, "ts_utc": "2026-11-19T16:36:14.128346+00:00"}
+{"delay_ms": 160.04485238281148, "elapsed_ms": 252.27484293282032, "event": "request_cancelled", "request_id": 18, "seed": 1, "ts_utc": "2026-11-19T16:36:14.132536+00:00"}
+{"delay_ms": 183.97098520901474, "elapsed_ms": 262.1021494269371, "event": "request_cancelled", "request_id": 4, "seed": 1, "ts_utc": "2026-11-19T16:36:14.139721+00:00"}
+{"delay_ms": 154.24443186421664, "elapsed_ms": 266.67693816125393, "event": "request_cancelled", "request_id": 34, "seed": 1, "ts_utc": "2026-11-19T16:36:14.149925+00:00"}
+{"delay_ms": 174.96945359610916, "elapsed_ms": 271.380708552897, "event": "request_cancelled", "request_id": 21, "seed": 1, "ts_utc": "2026-11-19T16:36:14.152164+00:00"}
+{"delay_ms": 146.20889310752042, "elapsed_ms": 266.5539961308241, "event": "request_cancelled", "request_id": 47, "seed": 1, "ts_utc": "2026-11-19T16:36:14.152230+00:00"}
+{"delay_ms": 141.0488239740354, "elapsed_ms": 266.81481301784515, "event": "request_cancelled", "request_id": 52, "seed": 1, "ts_utc": "2026-11-19T16:36:14.153411+00:00"}
+{"delay_ms": 171.10168076941085, "elapsed_ms": 273.8555418327451, "event": "request_cancelled", "request_id": 26, "seed": 1, "ts_utc": "2026-11-19T16:36:14.155590+00:00"}
+{"delay_ms": 133.19756136313597, "elapsed_ms": 269.25451681017876, "event": "request_cancelled", "request_id": 62, "seed": 1, "ts_utc": "2026-11-19T16:36:14.157764+00:00"}
+{"delay_ms": 188.56622633627563, "elapsed_ms": 279.8613924533129, "event": "request_cancelled", "request_id": 17, "seed": 1, "ts_utc": "2026-11-19T16:36:14.159936+00:00"}
+{"delay_ms": 168.29910851979102, "elapsed_ms": 279.05423380434513, "event": "request_cancelled", "request_id": 33, "seed": 1, "ts_utc": "2026-11-19T16:36:14.162113+00:00"}
+{"delay_ms": 150.7068604387943, "elapsed_ms": 277.5178151205182, "event": "request_cancelled", "request_id": 53, "seed": 1, "ts_utc": "2026-11-19T16:36:14.164301+00:00"}
+{"delay_ms": 143.3830225540921, "elapsed_ms": 277.33374014496803, "event": "request_cancelled", "request_id": 60, "seed": 1, "ts_utc": "2026-11-19T16:36:14.165478+00:00"}
+{"delay_ms": 189.87041989709638, "elapsed_ms": 288.47432043403387, "event": "request_cancelled", "request_id": 23, "seed": 1, "ts_utc": "2026-11-19T16:36:14.169661+00:00"}
+{"delay_ms": 181.54317965497606, "elapsed_ms": 290.3817882761359, "event": "request_cancelled", "request_id": 30, "seed": 1, "ts_utc": "2026-11-19T16:36:14.172843+00:00"}
+{"delay_ms": 219.58552212057614, "elapsed_ms": 317.06990487873554, "event": "request_cancelled", "request_id": 22, "seed": 1, "ts_utc": "2026-11-19T16:36:14.198074+00:00"}
+{"delay_ms": 241.01754700112994, "elapsed_ms": 320.32852340489626, "event": "request_cancelled", "request_id": 5, "seed": 1, "ts_utc": "2026-11-19T16:36:14.198140+00:00"}
+{"delay_ms": 183.04168077784635, "elapsed_ms": 312.13443633168936, "event": "request_cancelled", "request_id": 55, "seed": 1, "ts_utc": "2026-11-19T16:36:14.199359+00:00"}
+{"delay_ms": 192.43180080709868, "elapsed_ms": 313.5568480938673, "event": "request_cancelled", "request_id": 48, "seed": 1, "ts_utc": "2026-11-19T16:36:14.199414+00:00"}
+{"delay_ms": 225.93702722071978, "elapsed_ms": 319.9730096384883, "event": "request_cancelled", "request_id": 20, "seed": 1, "ts_utc": "2026-11-19T16:36:14.200581+00:00"}
+{"delay_ms": 189.59868648855243, "elapsed_ms": 324.4424369186163, "event": "request_cancelled", "request_id": 61, "seed": 1, "ts_utc": "2026-11-19T16:36:14.212771+00:00"}
+{"delay_ms": 215.56806982391456, "elapsed_ms": 328.5377537831664, "event": "request_cancelled", "request_id": 40, "seed": 1, "ts_utc": "2026-11-19T16:36:14.212875+00:00"}
+{"delay_ms": 262.6335034877928, "elapsed_ms": 338.6340457946062, "event": "request_cancelled", "request_id": 3, "seed": 1, "ts_utc": "2026-11-19T16:36:14.216040+00:00"}
+{"delay_ms": 232.7773987310663, "elapsed_ms": 344.75780464708805, "event": "request_cancelled", "request_id": 35, "seed": 1, "ts_utc": "2026-11-19T16:36:14.228183+00:00"}
+{"delay_ms": 216.772899994389, "elapsed_ms": 344.3961748853326, "event": "request_cancelled", "request_id": 54, "seed": 1, "ts_utc": "2026-11-19T16:36:14.231369+00:00"}
+{"delay_ms": 265.32496403438614, "elapsed_ms": 380.03275357186794, "event": "request_cancelled", "request_id": 41, "seed": 1, "ts_utc": "2026-11-19T16:36:14.264559+00:00"}
+{"delay_ms": 284.06211901715517, "elapsed_ms": 414.3409691751003, "event": "request_cancelled", "request_id": 56, "seed": 1, "ts_utc": "2026-11-19T16:36:14.301752+00:00"}
+{"event": "metrics_snapshot", "tag": "round_0_after_cancel", "ts_utc": "2026-11-19T16:36:16.311307+00:00", "values": {"vllm:kv_cache_usage_perc{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\"}": "0.0", "vllm:num_requests_running{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\"}": "0.0", "vllm:num_requests_waiting_by_reason{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\",reason=\"capacity\"}": "0.0", "vllm:num_requests_waiting_by_reason{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\",reason=\"deferred\"}": "4.0", "vllm:num_requests_waiting{engine=\"0\",model_name=\"Qwen/Qwen3-0.6B\"}": "4.0"}}
+{"event": "cancel_round", "outcomes": {"cancelled": 64}, "round_id": 0, "target_crash": true, "ts_utc": "2026-11-19T16:36:16.311791+00:00", "vllm_returncode": null}
+{"event": "process_stopped", "name": "vllm", "pgid": 15097, "pid": 15097, "returncode": 0, "ts_utc": "2026-11-19T16:36:16.926826+00:00"}
+{"event": "process_stopped", "name": "lmcache_server", "pgid": 14993, "pid": 14993, "returncode": -15, "ts_utc": "2026-11-19T16:36:20.244587+00:00"}
+{"event": "e2e_cleanup_complete", "ts_utc": "2026-11-19T16:36:20.244663+00:00"}

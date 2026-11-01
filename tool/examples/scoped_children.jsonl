@@ -1,0 +1,4 @@
+{"event": "request_finished", "request_id": "r", "child": "c1"}
+{"event": "request_finished", "request_id": "r", "child": "c2"}
+{"event": "observe", "sending": [{"request_id": "r", "child": "c1"}], "recving": []}
+{"event": "observe", "sending": [{"request_id": "r", "child": "c2"}], "recving": []}

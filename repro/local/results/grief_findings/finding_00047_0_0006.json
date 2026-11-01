@@ -1,0 +1,56 @@
+{
+  "minimized_validation": {
+    "status": "not_minimized"
+  },
+  "iteration": 47,
+  "detected_at": 1794916515.5630972,
+  "campaign_elapsed_s": 484.5799820423126,
+  "search_mode": "grief",
+  "bugs_detected": [
+    {
+      "class": "liveness_failure",
+      "detail": "server /health check failed",
+      "score": 10.0,
+      "probe_metadata": null
+    }
+  ],
+  "seed": 0,
+  "trace": {
+    "seed": 0,
+    "events": [],
+    "tags": []
+  },
+  "bugs": [
+    {
+      "class": "liveness_failure",
+      "detail": "server /health check failed",
+      "score": 10.0,
+      "probe_metadata": null
+    }
+  ],
+  "mech_sig": "321e24d63312199d",
+  "mech_sig_version": 2,
+  "sig_occurrence": 4,
+  "campaign_id": "11b1634f",
+  "server_flags": "",
+  "baseline_ttft_ms": 3059.2172145843506,
+  "baseline_prompt_len": 256,
+  "campaign_name": "",
+  "config_id": "",
+  "config_file": "",
+  "mode": "",
+  "model": "Qwen/Qwen3-0.6B",
+  "engine": "vllm",
+  "adapter": "VllmBaseAdapter",
+  "gpu_type": "",
+  "slot_id": "",
+  "rotation_index": -1,
+  "slurm_job_id": "",
+  "hostname": "<HOST>",
+  "vllm_version": "0.25.1",
+  "minimized": false,
+  "measurement_gaps": [
+    "memory_leak: no gpu data",
+    "kv_block_leak: engine not drained (running=3 waiting=5)"
+  ]
+}

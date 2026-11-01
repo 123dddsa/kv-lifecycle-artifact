@@ -1,0 +1,123 @@
+{
+  "generated_utc": "2026-11-14T14:00:25.507348+00:00",
+  "source": "<HOME>\\<DATA>\\post_review_completion\\real_200\\real_search_by_seed.csv",
+  "seed_range": "20..219 (fresh, disjoint from the original 0..19)",
+  "method": "parameter-free geometric prediction from exact DP q10; bootstrap and parametric-bootstrap diagnostics",
+  "note": "External calibration of the abstract model on the real LMCache/vLLM connector/scheduler harness with controlled I/O; not GPU E2E.",
+  "targets": [
+    {
+      "target": "stale_send",
+      "cells_random": 200,
+      "cells_directed": 200,
+      "right_censored": 1,
+      "directed_all_one": true,
+      "exact_q10": 0.027919811037165638,
+      "predicted_median": 25,
+      "observed": {
+        "n": 200,
+        "median": 26.5,
+        "ci95": [
+          22.0,
+          32.0
+        ],
+        "q1": 12.0,
+        "q3": 52.25,
+        "min": 1.0,
+        "max": 201.0
+      },
+      "median_ratio_pred_over_obs": 0.9433962264150944,
+      "p_median_tail_under_q": 0.5906,
+      "ks_geometric": {
+        "ks_distance": 0.056522688991697545,
+        "bootstrap_p": 0.56015,
+        "draws": 20000
+      },
+      "candidate_level": {
+        "candidates": 6962,
+        "hits": 199,
+        "empirical_q": 0.028583740304510198,
+        "empirical_q_wilson_95": [
+          0.02492196328670924,
+          0.032765462015204715
+        ],
+        "median_implied_by_empirical_q": 24
+      }
+    },
+    {
+      "target": "dual_completion",
+      "cells_random": 200,
+      "cells_directed": 200,
+      "right_censored": 0,
+      "directed_all_one": true,
+      "exact_q10": 0.37553697927562013,
+      "predicted_median": 2,
+      "observed": {
+        "n": 200,
+        "median": 2.0,
+        "ci95": [
+          2.0,
+          3.0
+        ],
+        "q1": 1.0,
+        "q3": 3.0,
+        "min": 1.0,
+        "max": 12.0
+      },
+      "median_ratio_pred_over_obs": 1.0,
+      "p_median_tail_under_q": 1.0,
+      "ks_geometric": {
+        "ks_distance": 0.3705369792756201,
+        "bootstrap_p": 1.0,
+        "draws": 20000
+      },
+      "candidate_level": {
+        "candidates": 546,
+        "hits": 200,
+        "empirical_q": 0.3663003663003663,
+        "empirical_q_wilson_95": [
+          0.3269528716015672,
+          0.4075160418318751
+        ],
+        "median_implied_by_empirical_q": 2
+      }
+    },
+    {
+      "target": "permanent_proc",
+      "cells_random": 200,
+      "cells_directed": 200,
+      "right_censored": 0,
+      "directed_all_one": true,
+      "exact_q10": 0.22593117312603,
+      "predicted_median": 3,
+      "observed": {
+        "n": 200,
+        "median": 3.0,
+        "ci95": [
+          2.0,
+          3.0
+        ],
+        "q1": 2.0,
+        "q3": 5.25,
+        "min": 1.0,
+        "max": 21.0
+      },
+      "median_ratio_pred_over_obs": 1.0,
+      "p_median_tail_under_q": 1.0,
+      "ks_geometric": {
+        "ks_distance": 0.22093117312603006,
+        "bootstrap_p": 1.0,
+        "draws": 20000
+      },
+      "candidate_level": {
+        "candidates": 852,
+        "hits": 200,
+        "empirical_q": 0.2347417840375587,
+        "empirical_q_wilson_95": [
+          0.20751187727391537,
+          0.2643529227524436
+        ],
+        "median_implied_by_empirical_q": 3
+      }
+    }
+  ]
+}

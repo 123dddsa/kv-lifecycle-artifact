@@ -1,0 +1,6 @@
+{
+  "schedules": {
+    "a": [true, true, false],
+    "b": [false, true, false]
+  }
+}

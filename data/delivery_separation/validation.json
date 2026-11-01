@@ -1,0 +1,45 @@
+{
+  "rows": 1200,
+  "cells": {
+    "separated:stale_send": {
+      "candidates": 200,
+      "found": 7,
+      "assertions": 78,
+      "harness_errors": 0
+    },
+    "separated:dual_completion": {
+      "candidates": 200,
+      "found": 65,
+      "assertions": 73,
+      "harness_errors": 0
+    },
+    "separated:permanent_proc": {
+      "candidates": 200,
+      "found": 45,
+      "assertions": 0,
+      "harness_errors": 0
+    },
+    "merged:stale_send": {
+      "candidates": 200,
+      "found": 0,
+      "assertions": 74,
+      "harness_errors": 0
+    },
+    "merged:dual_completion": {
+      "candidates": 200,
+      "found": 102,
+      "assertions": 102,
+      "harness_errors": 0
+    },
+    "merged:permanent_proc": {
+      "candidates": 200,
+      "found": 44,
+      "assertions": 0,
+      "harness_errors": 0
+    }
+  },
+  "matches_summary": true,
+  "merged_stale_hidden_but_asserting": true,
+  "no_harness_errors": true,
+  "status": "pass"
+}

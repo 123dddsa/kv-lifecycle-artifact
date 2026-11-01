@@ -1,0 +1,4 @@
+{"event": "request_finished", "request_id": "r", "delay_free": false}
+{"event": "observe", "sending": [], "recving": ["r"]}
+{"event": "free", "request_id": "r"}
+{"event": "quiescence", "pending_recvs": [], "delay_free_drained": true}
